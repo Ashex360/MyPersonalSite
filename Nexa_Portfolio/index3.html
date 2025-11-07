@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish Sarda | Backend & AI/ML Developer</title>
+    <meta name="description" content="Backend Developer & AI/ML Enthusiast building scalable APIs and intelligent applications">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="logo-shape"></div>
+                <span>AS</span>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+            <p>Loading Portfolio...</p>
+        </div>
+    </div>
+
+    <!-- Cursor Effects
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-circle" id="cursor-circle"></div>-->
+
+    <!-- Background Elements -->
+    <div class="background-elements">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="grid-lines"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-effect">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <div class="logo-icon">
+                        <div class="logo-shape"></div>
+                    </div>
+                    <span>Ashish Sarda</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active" data-section="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#about" class="nav-link" data-section="about">
+                    <i class="fas fa-user"></i>
+                    <span>About</span>
+                </a>
+                <a href="#projects" class="nav-link" data-section="projects">
+                    <i class="fas fa-code"></i>
+                    <span>Projects</span>
+                </a>
+                <a href="#experience" class="nav-link" data-section="experience">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Experience</span>
+                </a>
+                <a href="#skills" class="nav-link" data-section="skills">
+                    <i class="fas fa-cogs"></i>
+                    <span>Skills</span>
+                </a>
+                <a href="#contact" class="nav-link" data-section="contact">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+
+            <div class="nav-controls">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <div class="toggle-track">
+                        <div class="toggle-thumb">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </div>
+                </button>
+
+                <!-- Sound Toggle -->
+                <button class="sound-toggle" id="sound-toggle" aria-label="Toggle sound">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+
+                <!-- Menu Toggle -->
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section home-section active">
+            <div class="container">
+                <div class="home-content">
+                    <!-- Social Links Sidebar -->
+                    <div class="social-sidebar">
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <div class="social-line"></div>
+                    </div>
+
+                    <!-- Main Hero Content -->
+                    <div class="hero-main">
+                        <div class="hero-badge">
+                            <span>🚀 Available for new opportunities</span>
+                        </div>
+                        
+                        <h1 class="hero-title">
+                            <span class="title-line">
+                                <span class="text-reveal">Building Digital</span>
+                            </span>
+                            <span class="title-line">
+                                <span class="text-reveal">Experiences with</span>
+                            </span>
+                            <span class="title-line">
+                                <span class="text-gradient">
+                                    <span class="typing-text" id="typing-text"></span>
+                                    <span class="cursor">|</span>
+                                </span>
+                            </span>
+                        </h1>
+
+                        <p class="hero-description">
+                            I specialize in creating <strong>scalable backend systems</strong> and 
+                            <strong>intelligent AI solutions</strong> that solve complex problems. 
+                            Currently pushing the boundaries of what's possible with code.
+                        </p>
+
+                        <div class="hero-actions">
+                            <button class="btn btn-primary magnetic" data-magnetic>
+                                <span class="btn-content">
+                                    <i class="fas fa-rocket"></i>
+                                    Explore My Work
+                                </span>
+                                <div class="btn-background"></div>
+                            </button>
+                            
+                            <button class="btn btn-secondary magnetic" data-magnetic>
+                                <span class="btn-content">
+                                    <i class="fas fa-download"></i>
+                                    Download CV
+                                </span>
+                            </button>
+                        </div>
+
+                        <!-- Stats Grid -->
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-number" data-count="15">0</div>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number" data-count="2">0</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number" data-count="10">0</div>
+                                <div class="stat-label">Technologies</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number" data-count="5">0</div>
+                                <div class="stat-label">Certifications</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual -->
+                    <div class="hero-visual">
+                        <div class="visual-container">
+                            <!-- Animated Code Window -->
+                            <div class="code-window glass-effect">
+                                <div class="window-header">
+                                    <div class="window-controls">
+                                        <span class="control red"></span>
+                                        <span class="control yellow"></span>
+                                        <span class="control green"></span>
+                                    </div>
+                                    <span class="window-title">backend_api.py</span>
+                                </div>
+                                <div class="code-content">
+                                    <pre><code class="language-python">
+class BackendDeveloper:
+    def __init__(self):
+        self.name = "Ashish Sarda"
+        self.role = "Backend & AI/ML"
+        self.skills = ["Python", "Node.js", "ML", "Cloud"]
+    
+    def build_solutions(self):
+        return "Scalable & Intelligent Systems"
+    
+    def solve_problems(self):
+        return "With Clean Code & Innovation"
+                                    </code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Floating Tech Icons -->
+                            <div class="floating-tech">
+                                <div class="tech-icon python" data-tooltip="Python">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <div class="tech-icon node" data-tooltip="Node.js">
+                                    <i class="fab fa-node-js"></i>
+                                </div>
+                                <div class="tech-icon ai" data-tooltip="AI/ML">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="tech-icon cloud" data-tooltip="Cloud">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <div class="tech-icon db" data-tooltip="Database">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-number">01</span>
+                        About Me
+                    </h2>
+                    <p class="section-subtitle">Get to know the person behind the code</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="about-bio">
+                            <h3>Backend Developer & AI/ML Enthusiast</h3>
+                            <p>
+                                I'm passionate about creating <strong>efficient, scalable systems</strong> 
+                                that power amazing digital experiences. With expertise in backend development 
+                                and artificial intelligence, I bridge the gap between complex problems and 
+                                elegant solutions.
+                            </p>
+                            <p>
+                                When I'm not coding, you'll find me exploring new technologies, 
+                                contributing to open-source projects, or diving into research papers 
+                                about machine learning advancements.
+                            </p>
+                        </div>
+
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <strong>Name:</strong>
+                                <span>Ashish Sarda</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Location:</strong>
+                                <span>India</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Email:</strong>
+                                <span>ashish@example.com</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Availability:</strong>
+                                <span class="availability">Open to Opportunities</span>
+                            </div>
+                        </div>
+
+                        <div class="about-actions">
+                            <button class="btn btn-outline">
+                                <i class="fas fa-file-alt"></i>
+                                View Full Resume
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="about-visual">
+                        <!-- Interactive Skill Graph -->
+                        <div class="skill-graph">
+                            <div class="graph-node" data-skill="Backend" data-level="95">
+                                <span>Backend</span>
+                            </div>
+                            <div class="graph-node" data-skill="AI/ML" data-level="85">
+                                <span>AI/ML</span>
+                            </div>
+                            <div class="graph-node" data-skill="Cloud" data-level="80">
+                                <span>Cloud</span>
+                            </div>
+                            <div class="graph-node" data-skill="Database" data-level="90">
+                                <span>Database</span>
+                            </div>
+                            <div class="graph-node" data-skill="DevOps" data-level="75">
+                                <span>DevOps</span>
+                            </div>
+                            <canvas id="skill-canvas"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-number">02</span>
+                        Featured Projects
+                    </h2>
+                    <p class="section-subtitle">Some of my recent work that I'm proud of</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card" data-project="pravasmitra">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <button class="project-link live-demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                    <button class="project-link github">
+                                        <i class="fab fa-github"></i>
+                                    </button>
+                                    <button class="project-link details">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <img src="images/projects/pravasmitra.jpg" alt="PravasMitra" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">PravasMitra</h3>
+                            <p class="project-description">
+                                Real-time bus tracking system with IoT sensors and Google Maps integration
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">IoT</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">WebSockets</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card" data-project="morphshield">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <button class="project-link live-demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                    <button class="project-link github">
+                                        <i class="fab fa-github"></i>
+                                    </button>
+                                    <button class="project-link details">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <img src="images/projects/morphshield.jpg" alt="MorphShield" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">MorphShield</h3>
+                            <p class="project-description">
+                                Advanced deepfake detection using EfficientNetB4 and forensic analysis
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">OpenCV</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card" data-project="studyfourge">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <button class="project-link live-demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                    <button class="project-link github">
+                                        <i class="fab fa-github"></i>
+                                    </button>
+                                    <button class="project-link details">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <img src="images/projects/studyfourge.jpg" alt="StudyFourge" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">StudyFourge</h3>
+                            <p class="project-description">
+                                Learning platform serving 500+ users with real-time analytics
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">MERN Stack</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Socket.io</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="section-footer">
+                    <button class="btn btn-outline view-more">
+                        <span>View All Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-number">03</span>
+                        Experience
+                    </h2>
+                    <p class="section-subtitle">My professional journey and achievements</p>
+                </div>
+
+                <div class="experience-timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content glass-effect">
+                            <div class="timeline-header">
+                                <h3>Backend Development Intern</h3>
+                                <span class="timeline-period">2024 - Present</span>
+                            </div>
+                            <div class="timeline-company">
+                                <span class="company-name">Tech Innovators Inc.</span>
+                                <span class="company-location">Remote</span>
+                            </div>
+                            <p class="timeline-description">
+                                Developing scalable microservices and REST APIs for enterprise applications. 
+                                Implementing real-time features and optimizing database performance.
+                            </p>
+                            <div class="timeline-tech">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content glass-effect">
+                            <div class="timeline-header">
+                                <h3>Founder & Lead Developer</h3>
+                                <span class="timeline-period">2023 - 2024</span>
+                            </div>
+                            <div class="timeline-company">
+                                <span class="company-name">StudyFourge</span>
+                                <span class="company-location">India</span>
+                            </div>
+                            <p class="timeline-description">
+                                Built and scaled an educational platform from scratch to 500+ active users. 
+                                Implemented real-time features, analytics, and automated systems.
+                            </p>
+                            <div class="timeline-tech">
+                                <span class="tech-tag">MERN Stack</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">DigitalOcean</span>
+                                <span class="tech-tag">Stripe</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-number">04</span>
+                        Skills & Technologies
+                    </h2>
+                    <p class="section-subtitle">Tools and technologies I work with</p>
+                </div>
+
+                <div class="skills-container">
+                    <!-- Skill Category 1 -->
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-server"></i>
+                            Backend Development
+                        </h3>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="Node.js" data-level="95">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Python" data-level="90">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Java" data-level="80">
+                                <div class="skill-info">
+                                    <span class="skill-name">Java</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Category 2 -->
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-brain"></i>
+                            AI/ML & Data Science
+                        </h3>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-skill="TensorFlow" data-level="85">
+                                <div class="skill-info">
+                                    <span class="skill-name">TensorFlow</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="PyTorch" data-level="80">
+                                <div class="skill-info">
+                                    <span class="skill-name">PyTorch</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="OpenCV" data-level="75">
+                                <div class="skill-info">
+                                    <span class="skill-name">OpenCV</span>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="title-number">05</span>
+                        Get In Touch
+                    </h2>
+                    <p class="section-subtitle">Let's build something amazing together</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-card glass-effect">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>ashish@example.com</p>
+                                <span>I'll reply within 24 hours</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-card glass-effect">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>+91 XXXXX XXXXX</p>
+                                <span>Mon - Fri, 9am - 6pm</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-card glass-effect">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>India</p>
+                                <span>Open to remote work</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container glass-effect">
+                        <form class="contact-form" id="contact-form" netlify>
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Ashish Sarda. Built with 💻 and ☕</p>
+                    <p>Made with HTML, CSS, JavaScript & hosted on Netlify</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Privacy</a>
+                    <a href="#" class="footer-link">Terms</a>
+                    <a href="#" class="footer-link">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Project Modals will be injected here by JavaScript -->
+    <div id="modals-container"></div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/typing.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
