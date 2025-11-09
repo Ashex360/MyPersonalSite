@@ -1,7 +1,7 @@
 // ===== TYPING ANIMATION CONTROLLER =====
 class TypingAnimation {
     constructor() {
-        this.roles = [
+        this.roles = [/*
             'Backend Systems',
             'AI Solutions', 
             'Scalable APIs',
@@ -9,7 +9,7 @@ class TypingAnimation {
             'Cloud Architecture',
             'Data Pipelines',
             'Microservices',
-            'Real-time Applications'
+            'Real-time Applications'*/
         ];
         
         this.currentRoleIndex = 0;
